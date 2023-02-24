@@ -1,1 +1,6 @@
 TODO: Task 1 - Write the mongo import command here
+
+mongoimport -hlocalhost --port=27017 -dcsf -crestaurants --jsonArray ./restaurants.json
+
+mongoimport -hcontainers-us-west-49.railway.app --port=7818 -dcsf -crestaurants --jsonArray ./restaurants.json
+

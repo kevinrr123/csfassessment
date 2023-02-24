@@ -1,1 +1,56 @@
-<p>restaurant-details works!</p>
+<div *ngIf="restaurant">
+    <div>
+        <table>
+            <tr>
+                <h4>{{ restaurant.name }}</h4>
+            </tr>
+            <tr>
+                <h4>{{ restaurant.cusisine }}</h4>
+            </tr>
+            <tr>
+                <h4>{{ restaurant.address }}</h4>
+            </tr>
+            <tr>
+                <h4>{{ restaurant.coordinates }}</h4>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div>
+    <form [formGroup]="form" (ngSubmit)="postComments()">
+      <table>
+        <tr>
+          <td> <label for="name">Name:</label> </td>
+          <td>
+            <input type="text" size="50" id="name" placeholder="name" formControlName="name">
+          </td>
+        </tr>
+        <tr>
+            <td> <label for="rating">rating:</label> </td>
+            <td>
+                <input type="text" size="50" id="name" placeholder="rating" formControlName="rating">
+            </td>
+        </tr>
+        <tr>
+            <input type="text" formControlName="restaurantId"> {{restaurant.restaurantId}}
+        </tr>
+        <tr>
+            <td> <label for="name">email:</label> </td>
+            <td>
+                <input type="text" size="500" id="name" placeholder="commentss" formControlName="text">
+            </td>
+        </tr>
+        <td>
+            <div>
+              <button type="submit" [disabled]="form.invalid">Post</button>
+            </div>
+        </td>
+      </table>
+    </form>
+</div>
+<div>
+    <button [routerLink]="['/']">Back to cuisines</button>
+</div>
+            

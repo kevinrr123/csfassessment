@@ -1,7 +1,7 @@
 // Do not change these interfaces
 export interface Restaurant {
 	restaurantId: string
-	namd: string
+	name: string
 	cusisine: string
 	address: string
 	coordinates: number[]
@@ -13,3 +13,7 @@ export interface Comment {
 	restaurantId: string
 	text: string
 }
+
+export interface Cuisines {
+    cuisine: string
+  }
